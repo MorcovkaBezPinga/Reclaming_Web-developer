@@ -1,27 +1,168 @@
+.body {
+  background-color: #1d2f30;
+}
 .navigation {
-  width: 1550px;
-  height: 80px;
-  background-color: #ffffff;
+  /* Rectangle 7 */
+  width: 1525px;
+  height: 70px;
+  left: -300px;
+  top: 0px;
+
+  /* background */
+  background: #1d2f30;
 }
 .nav__logo {
-  width: 50px;
-  height: 42px;
-  margin: 19px 0 19px 30px;
-  margin-left: 720px;
-}
-.main h1 {
+  /* logo */
   position: absolute;
-  height: 48px;
-  left: 24px;
-  right: 24px;
+  background: #1d2f30;
+  left: 110px;
+  top: 30px;
+}
+.nav__list {
+  position: absolute;
+  list-style: none;
+  width: 512px;
+  height: 24px;
+  left: 450px;
+  top: 17px;
+  gap: 64px;
+  display: flex;
+  justify-content: space-evenly;
+}
+/* Link navigation color */
+.nav__list li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 15px;
+}
+.nav__list li a:hover {
+  color: #bae249;
+}
+.nav__list li a:active {
+  color: #688b05;
+}
+.nav__list li a:focus {
+  color: #83a440;
+}
+.nav__search {
+  /* search */
 
-  font-family: "Poppins";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 1185px;
+  top: 30px;
+}
+.nav__search:hover {
+  cursor: pointer;
+  color: #91ac46;
+}
+.nav__search:focus {
+  color: #83a440;
+}
+.nav__log_in {
+  /* log-in */
+
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 1280px;
+  top: 30px;
+}
+.nav__log_in:hover {
+  cursor: pointer;
+  color: #91ac46;
+}
+.nav__search:focus {
+  color: #83a440;
+}
+.hero__image {
+  width: 100%;
+  height: 100vh; /* или нужная высота */
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.45); /* затемнение фото */
+}
+.info_hero {
+  /* Крупнейшая коллекция природных артефактов */
+
+  position: absolute;
+  width: 688px;
+  height: 125px;
+  left: 165px;
+  top: 175px;
+
+  /* h1 */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 100%;
+  /* or 60px */
+
+  /* white */
+  color: #ffffff;
+  font-family: "Cormorant", serif;
+  font-weight: 700; /* Bold */
+}
+.info_hero_p {
+  /* Являясь всего лишь частью общей картины, интерактивные прототипы, которые представляют собой яркий пример европейского типа политической и социальной культуры. */
+
+  position: absolute;
+  width: 635px;
+  height: 72px;
+  left: 165px;
+  top: 316px;
+
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
-  /* or 120% */
+  font-size: 16px;
+  line-height: 150%;
+  /* or 24px */
+  display: flex;
+  align-items: center;
 
-  /* almost black */
-  color: #1c1e23;
+  /* white */
+  color: #ffffff;
+}
+.hero__button {
+  /* Frame 6 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  font-size: 20px;
+
+  position: absolute;
+  width: 160px;
+  height: 23px;
+  left: 165px;
+  top: 412px;
+  /* color */
+  color: #bae249;
+  background: none;
+  border: none;
+}
+.hero__button:hover {
+  color: #91ac46;
+  cursor: pointer;
+}
+.hero__button:active {
+  color: #688b05;
+}
+.hero__button:disabled {
+  color: #899d9d;
+}
+.images_section {
+  background-color: #1d2f30;
+}
+.images_section_img {
+  left: 181px;
+  font-size: 30px;
 }
