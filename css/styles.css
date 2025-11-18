@@ -1,0 +1,27 @@
+.navigation {
+  width: 1550px;
+  height: 80px;
+  background-color: #ffffff;
+}
+.nav__logo {
+  width: 50px;
+  height: 42px;
+  margin: 19px 0 19px 30px;
+  margin-left: 720px;
+}
+.main h1 {
+  position: absolute;
+  height: 48px;
+  left: 24px;
+  right: 24px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  /* or 120% */
+
+  /* almost black */
+  color: #1c1e23;
+}
