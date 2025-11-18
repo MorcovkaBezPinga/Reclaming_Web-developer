@@ -5,28 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web_Market</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link href="./js/main.js" rel="script" />
   </head>
   <body>
     <header>
       <nav class="navigation">
         <img src="./images/logo.png" alt="Web_Market Logo" class="nav__logo" />
         <ul class="nav__list">
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Галерея</a></li>
-          <li><a href="#">О лаборатории</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li>
+            <a href="#catalog" class="nav-link" data-i18n="nav.catalog"
+              >Каталог</a
+            >
+          </li>
+          <li>
+            <a href="#gallery" class="nav-link" data-i18n="nav.gallery"
+              >Галерея</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="nav-link" data-i18n="nav.about"
+              >О лаборатории</a
+            >
+          </li>
+          <li>
+            <a href="#contacts" class="nav-link" data-i18n="nav.contacts"
+              >Контакты</a
+            >
+          </li>
         </ul>
         <div class="nav__actions">
           <img src="./images/search.png" alt="Search" class="nav__search" />
           <img src="./images/log-in.png" alt="Cart" class="nav__log_in" />
         </div>
+        <div class="nav__lang-switcher nav__lang-switcher--right">
+          <select id="lang-switcher">
+            <option value="ru">RU</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+        <!-- Кнопка "Вверх" -->
+        <button id="to-top-btn" title="Наверх" aria-label="Наверх">↑</button>
       </nav>
     </header>
     <main>
-      <section class="hero">
+      <section class="hero" id="catalog">
         <div class="hero__overlay">
           <img src="./images/1_1.png" alt="Hero Image" class="hero__image" />
-          <h1 class="info_hero">Крупнейшая коллекция природных артефактов</h1>
+          <h1 class="info_hero epic-appear">
+            Крупнейшая коллекция природных артефактов
+          </h1>
           <p class="info_hero_p">
             Являясь всего лишь частью общей картины, интерактивные прототипы,
             которые представляют собой яркий пример европейского типа
@@ -35,14 +62,14 @@
           <button class="hero__button">Исследовать ⟶</button>
         </div>
       </section>
-      <section class="images_section">
+      <section class="images_section" id="gallery">
         <div class="card">
           <img
             src="./images/Layer 3.png"
             alt="Image 1"
             class="images_section_like"
           />
-          <h2 class="images_h2">Fig. 1 (plant)</h2>
+          <h2 class="images_h2 epic-appear">Fig. 1 (plant)</h2>
           <p>
             Имеется спорная точка зрения, гласящая примерно следующее: активно
             развивающиеся страны третьего мира своевременно верифицированы.
@@ -55,7 +82,7 @@
             alt="Like"
             class="images_section_like"
           />
-          <h2 class="images_info_h2">Fig. 2 (flower)</h2>
+          <h2 class="images_info_h2 epic-appear">Fig. 2 (flower)</h2>
           <p>
             Прежде всего, синтетическое тестирование влечет за собой процесс
             внедрения и модернизации условий.
@@ -68,7 +95,7 @@
             alt="Image 3"
             class="images_section_like"
           />
-          <h2 class="images_h2">Fig. 3 (leaf)</h2>
+          <h2 class="images_h2 epic-appear">Fig. 3 (leaf)</h2>
           <p>
             Лишь непосредственные участники прогресса неоднозначны и будут в
             равной степени предоставлены сами себе для работы.
@@ -81,7 +108,7 @@
             alt="Like"
             class="images_section_like"
           />
-          <h2 class="images_info_h2">Fig. 3 (leaf)</h2>
+          <h2 class="images_info_h2 epic-appear">Fig. 3 (leaf)</h2>
           <p>
             Лишь непосредственные участники прогресса неоднозначны и будут в
             равной степени предоставлены сами себе для работы.
@@ -91,7 +118,7 @@
       </section>
 
       <!-- Переключатель страниц / pager под карточками -->
-      <section class="arty">
+      <section class="arty" id="about">
         <div
           class="cards-pager"
           role="navigation"
@@ -116,7 +143,7 @@
           </button>
         </div>
         <div class="artefakt">
-          <h2>Новые артефакты</h2>
+          <h2 class="epic-appear">Новые артефакты</h2>
           <img
             class="life_img"
             src="./images/card_5.png"
@@ -125,7 +152,7 @@
           />
         </div>
         <div class="artefakt_line2">
-          <h3 class="Kurische_Nehrung_24">Kurische Nehrung 24</h3>
+          <h3 class="Kurische_Nehrung_24 epic-appear">Kurische Nehrung 24</h3>
           <p>
             Вот вам яркий пример современных тенденций - начало повседневной
             работы по формированию позиции выявляет срочную потребность методов
@@ -139,9 +166,9 @@
           <button class="artefakt_button" type="button">Читать далее ⟶</button>
         </div>
       </section>
-      <section class="main-login">
+      <section class="main-login" id="contacts">
         <img src="./images/1_1 (1).png" alt="Login Image" class="login_image" />
-        <h3>Помочь проекту</h3>
+        <h3 class="epic-appear">Помочь проекту</h3>
         <p>
           Равным образом, экономическая повестка сегодняшнего дня не даёт нам
           иного выбора, кроме определения прогресса профессионального
@@ -177,8 +204,10 @@
           <img class="social-img" src="./images/Frame (3).png" alt="Faccebuk" />
           <img class="social-img" src="./images/Frame (4).png" alt="Twitter" />
         </div>
-        <p class="license">f&b ® 2020</p>
+  <p class="footer-extra epic-appear">Сделано с любовью к природе и технологиям</p>
+  <p class="license">f&b ® 2020</p>
       </section>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
