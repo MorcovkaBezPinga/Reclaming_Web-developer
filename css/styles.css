@@ -245,14 +245,22 @@ body {
   background-color: #1d2f30;
 }
 .navigation {
-  /* Rectangle 7 */
-  width: 1515px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 70px;
-  left: -300px;
-  top: 0px;
-
-  /* background */
-  background: #1d2f30;
+  background: #1d2f30cc;
+  box-shadow: 0 0 0 transparent;
+  z-index: 1002;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+.navigation.sticky {
+  background: #1d2f30ee;
+  box-shadow: 0 4px 24px #0005;
+}
+body {
+  padding-top: 70px;
 }
 .nav__logo {
   /* logo */

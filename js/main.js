@@ -1,3 +1,16 @@
+// Фиксация панели навигации при скролле
+document.addEventListener('DOMContentLoaded', function () {
+  const nav = document.querySelector('.navigation');
+  function navSticky() {
+    if (window.scrollY > 10) {
+      nav.classList.add('sticky');
+    } else {
+      nav.classList.remove('sticky');
+    }
+  }
+  window.addEventListener('scroll', navSticky);
+  navSticky();
+});
 // Кнопка "Вверх"
 document.addEventListener('DOMContentLoaded', function () {
   const toTopBtn = document.getElementById('to-top-btn');
