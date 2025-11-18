@@ -1,9 +1,15 @@
 .body {
+  /* legacy class kept for compatibility; real page background uses the body element below */
+  background-color: #1d2f30;
+}
+
+/* Ensure the actual <body> element has the dark background so no white gaps appear */
+body {
   background-color: #1d2f30;
 }
 .navigation {
   /* Rectangle 7 */
-  width: 1525px;
+  width: 1515px;
   height: 70px;
   left: -300px;
   top: 0px;
@@ -173,69 +179,309 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-
-.card {
-  background-color: #0b1919;
-  border: 1px solid #2a4a4b;
+.images_section {
   display: flex;
-  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  background-color: #1d2f30; /* фон карточки */
+  padding: 20px;
+  border-radius: 1px; /* скругление */
+  width: 250px;
+  text-align: center;
+  box-shadow: none; /* убираем тень */
+  color: #fff; /* текст виден на темном фоне */
+  border: 2px solid #000000b6; /* маленькая прозрачная рамка */
+}
+
+.card_img {
+  width: 50px; /* фото меньше карточки */
+  height: auto;
   border-radius: 8px;
-  overflow: hidden;
-  width: 255px;
-  height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(186, 226, 73, 0.15);
+.card h2,
+.card p {
+  margin: 10px 0;
 }
 
-.card__img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-}
-
-.card__title {
-  color: #ffffff;
-  font-family: "Cormorant", serif;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 20px 15px 10px 15px;
-  margin: 0;
-}
-
-.card__text {
-  color: #b8b8b8;
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  padding: 0 15px 15px 15px;
-  margin: 0;
-  flex-grow: 1;
-}
-
-.card__button {
-  color: #bae249;
-  background: none;
-  border: 1px solid #bae249;
-  padding: 8px 15px;
-  margin: 0 15px 15px 15px;
-  font-size: 14px;
-  font-family: "Open Sans", sans-serif;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 4px;
-}
-
-.card__button:hover {
+.card button {
+  margin-top: 10px;
+  padding: 7px 18px;
+  border: #bae249 1px solid;
   background-color: #bae249;
+  color: #bae249;
+  border-radius: 5px;
+  cursor: pointer;
+  background: none;
+}
+.card button:hover {
+  background-color: #bae249;
+  color: #cccccc;
+}
+.card button:focus {
+  background-color: #1d2f30;
+  border: #cccccc 1px solid;
+  color: #cccccc;
+}
+.card button:disabled {
+  background-color: #1d2f30;
+  border: #899d9d 1px solid;
+  color: #899d9d;
+}
+.card button:active {
+  background-color: #688b05;
+  border: #688b05 1px solid;
   color: #0b1919;
 }
+.images_section_like {
+  background-color: #0b1919;
+  width: 255px;
+  height: 180px;
+}
+.cards-pager {
+  display: flex;
+  justify-content: center;
+  background-color: #1d2f30;
+  margin-top: -220px;
+}
+.pager__arrow pager__arrow--left {
+  background-color: #688b05;
+}
+.cards-pager {
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px 0 18px;
+  /* Заполнить фон под стрелками однотонным тёмным цветом, чтобы убрать разрыв */
+  background-color: #1d2f30; /* был transparent, заменено по просьбе пользователя */
+  color: #d8e1df;
+}
 
-.card__button:active {
-  color: #688b05;
-  border-color: #688b05;
+.pager__counter {
+  position: relative; /* чтобы располагаться над линией */
+  z-index: 2;
+  color: #f7f7f7;
+  font-family: "Cormorant", serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 0 8px;
+}
+
+.pager__arrow {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  border: none;
+  color: #bfbfbf; /* светло-серый, как на фото */
+  font-size: 20px;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.15s ease, transform 0.12s ease;
+}
+
+.pager__arrow:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.pager__arrow[disabled] {
+  opacity: 0.45;
+  cursor: default;
+}
+
+/* линия под переключателем */
+.arty {
+  background-color: #1d2f30;
+  margin-top: 200px;
+}
+.images_section {
+  background-color: #1d2f30;
+}
+.artefakt h2 {
+  font-family: "Cormorant", serif; /* укажи свой шрифт */
+  font-weight: bold; /* жирный */
+  font-style: italic; /* курсив */
+  font-size: 30px; /* размер текста */
+  color: #ffffff; /* цвет текста */
+  width: 355px;
+  height: 48px;
+  margin-left: 165px;
+}
+.life_img {
+  width: 825px;
+  height: 493px;
+  margin-left: 165px;
+}
+.artefakt_line2 {
+  position: absolute;
+  width: 255px;
+  height: 493px;
+  left: 1020px;
+  top: 1300px;
+  margin-top: 189px;
+
+  background-color: #bae249;
+}
+.Kurische_Nehrung_24 {
+  margin-left: 16px;
+  margin-right: 39px;
+}
+.artefakt_line2 p {
+  margin-top: 25px;
+  margin-left: 16px;
+  font-family: "Open Sans", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: normal;
+}
+.artefakt_line2 button {
+  margin-left: 16px;
+  margin-top: 45px;
+  color: #0b1919;
+}
+.artefakt_button {
+  color: #0b1919;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-family: "Open Sans", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: normal;
+}
+.login_image {
+  width: 1500px;
+  height: 463px;
+  filter: brightness(65%);
+}
+.main-login h3 {
+  /* Помочь проекту */
+
+  position: absolute;
+  width: 400px;
+  height: 48px;
+  left: 165px;
+  top: 1913px;
+  margin-top: 120px;
+
+  /* h2 */
+  font-family: "Cormorant";
+  font-style: italic;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  /* identical to box height, or 48px */
+
+  /* white */
+  color: #ffffff;
+}
+.main-login p {
+  /* Равным образом, экономическая повестка сегодняшнего дня не даёт нам иного выбора, кроме определения прогресса профессионального сообщества. Как принято считать, элементы политического процесса рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. */
+
+  position: absolute;
+  width: 825px;
+  height: 72px;
+  left: 165px;
+  top: 1977px;
+  margin-top: 130px;
+
+  /* p1_regular */
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  /* or 24px */
+
+  /* white */
+  color: #ffffff;
+}
+.registration-form {
+  display: flex;
+  flex-direction: column; /* поля идут сверху вниз */
+  width: 300px; /* ширина формы */
+  gap: 10px; /* расстояние между элементами */
+  margin: 0 auto; /* центр формы по горизонтали */
+}
+
+.registration-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+}
+
+.registration-form button {
+  padding: 10px;
+  background-color: #bae249;
+  color: #0b1919;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+  width: 145px;
+  height: 40px;
+}
+/* Group 212 */
+.login {
+  position: absolute;
+  width: 350px;
+  height: 183px;
+  left: 137px;
+  top: 2020px;
+  margin-top: 200px;
+}
+.name:hover {
+  background-color: #899d9d;
+  color: #0b1919;
+}
+.email:hover {
+  background-color: #899d9d;
+  color: #0b1919;
+}
+.registration-form button:hover {
+  background-color: #91ac46;
+  color: #0b1919;
+  cursor: pointer;
+}
+.registration-form button:focus {
+  background-color: #83a440;
+  border: #0b1919 1px solid;
+  color: #cccccc;
+}
+.registration-form button:active {
+  background-color: #688b05;
+}
+.registration-form button:disabled {
+  background-color: #899d9d;
+  border: #899d9d 1px solid;
+  color: #899d9d;
+}
+.social-link {
+  background-color: #0b1919;
+  width: 1500px;
+  height: 60px;
+}
+.social-img {
+  width: 28px; /* чтобы не растягивались */
+  height: 28px;
+  object-fit: contain;
+  margin-top: 16px;
+  cursor: pointer;
+}
+.social-container {
+  display: flex;
+  justify-content: center; /* по центру */
+  align-items: center;
+  gap: 20px; /* расстояние между иконками */
+}
+.footer-info {
+  background-color: #899D9D;
+  margin-top: -30px;
 }

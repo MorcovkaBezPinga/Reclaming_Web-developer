@@ -36,11 +36,11 @@
         </div>
       </section>
       <section class="images_section">
-        <div class="images_section_item">
+        <div class="card">
           <img
             src="./images/Layer 3.png"
             alt="Image 1"
-            class="images_section_img"
+            class="images_section_like"
           />
           <h2 class="images_h2">Fig. 1 (plant)</h2>
           <p>
@@ -48,6 +48,8 @@
             развивающиеся страны третьего мира своевременно верифицированы.
           </p>
           <button class="img_button" type="button">Подробнее</button>
+        </div>
+        <div class="card">
           <img
             src="./images/Layer 2.png"
             alt="Like"
@@ -59,10 +61,12 @@
             внедрения и модернизации условий.
           </p>
           <button class="img_button" type="button">Подробнее</button>
+        </div>
+        <div class="card">
           <img
             src="./images/Layer 4.png"
             alt="Image 3"
-            class="images_section_img"
+            class="images_section_like"
           />
           <h2 class="images_h2">Fig. 3 (leaf)</h2>
           <p>
@@ -70,6 +74,8 @@
             равной степени предоставлены сами себе для работы.
           </p>
           <button class="img_button" type="button">Подробнее</button>
+        </div>
+        <div class="card">
           <img
             src="./images/Layer 1 1.png"
             alt="Like"
@@ -83,6 +89,98 @@
           <button class="img_button" type="button">Подробнее</button>
         </div>
       </section>
+
+      <!-- Переключатель страниц / pager под карточками -->
+      <section class="arty">
+        <div
+          class="cards-pager"
+          role="navigation"
+          aria-label="Карточки пагинация"
+        >
+          <button
+            class="pager__arrow pager__arrow--left"
+            aria-label="предыдущая"
+          >
+            &#8249;
+          </button>
+          <div class="pager__counter">
+            <span class="pager__current">1</span>
+            &nbsp;из&nbsp;
+            <span class="pager__total">3</span>
+          </div>
+          <button
+            class="pager__arrow pager__arrow--right"
+            aria-label="следующая"
+          >
+            &#8250;
+          </button>
+        </div>
+        <div class="artefakt">
+          <h2>Новые артефакты</h2>
+          <img
+            class="life_img"
+            src="./images/card_5.png"
+            alt="line"
+            class="artefakt_line"
+          />
+        </div>
+        <div class="artefakt_line2">
+          <h3 class="Kurische_Nehrung_24">Kurische Nehrung 24</h3>
+          <p>
+            Вот вам яркий пример современных тенденций - начало повседневной
+            работы по формированию позиции выявляет срочную потребность методов
+            управления процессами.
+          </p>
+
+          <p>
+            Есть над чем задуматься: представители современных социальных
+            резервов своевременно верифицированы.
+          </p>
+          <button class="artefakt_button" type="button">Читать далее ⟶</button>
+        </div>
+      </section>
+      <section class="main-login">
+        <img src="./images/1_1 (1).png" alt="Login Image" class="login_image" />
+        <h3>Помочь проекту</h3>
+        <p>
+          Равным образом, экономическая повестка сегодняшнего дня не даёт нам
+          иного выбора, кроме определения прогресса профессионального
+          сообщества. Как принято считать, элементы политического процесса
+          рассмотрены исключительно в разрезе маркетинговых и финансовых
+          предпосылок.
+        </p>
+        <div class="login">
+          <form class="registration-form">
+            <input type="text" class="name" name="name" placeholder="Имя" />
+
+            <input
+              type="email"
+              class="email"
+              name="email"
+              placeholder="Email"
+            />
+
+            <button class="Accept" type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <section class="social-link">
+        <div class="social-container">
+          <img class="social-img" src="./images/Frame.png" alt="Youtube" />
+          <img
+            class="social-img"
+            src="./images/Frame (1).png"
+            alt="Instagram"
+          />
+          <img class="social-img" src="./images/Frame (3).png" alt="Faccebuk" />
+          <img class="social-img" src="./images/Frame (4).png" alt="Twitter" />
+        </div>
+      </section>
+      <section class="footer-info">
+        <p>f&b ® 2020</p>
+      </section>
+    </footer>
   </body>
 </html>
