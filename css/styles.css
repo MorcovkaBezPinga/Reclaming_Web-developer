@@ -466,14 +466,15 @@ body {
 .social-link {
   background-color: #0b1919;
   width: 1500px;
-  height: 60px;
+  height: 110px;
 }
 .social-img {
   width: 28px; /* чтобы не растягивались */
-  height: 28px;
+  height: 35px;
   object-fit: contain;
   margin-top: 16px;
   cursor: pointer;
+  margin-top: 28px;
 }
 .social-container {
   display: flex;
@@ -481,7 +482,12 @@ body {
   align-items: center;
   gap: 20px; /* расстояние между иконками */
 }
-.footer-info {
-  background-color: #899D9D;
-  margin-top: -30px;
+.license {
+  color: #899d9d;
+  display: flex;
+  justify-content: center;
+}
+.footer {
+  width: 1500px;
+  height: 60px;
 }
